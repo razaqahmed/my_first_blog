@@ -10,19 +10,14 @@
 			<h2> On-demand. Investment models</h2>
 		</div>
 
-		<div>
-			<p>published: 14.03.2016, 12:01</p>
-			<h2><a href="">My first post</a></h2>
-			<P>A quick look at the World Bank data on GDP per capita, which measures the average wealth per person, across selected countries reveals a strong catch-up game between Nigeria and South Africa. In 1990, an average South African was 10x richer than an average Nigerian. 23 years after (in 2013)</P>
+		{% for post in posts %}
+			<div>
+				<p>Published: {{post.published_date}}</p>
+				<h1><a href="">{{post.title}}</a></h1>
+				<p>{{post.text|linebreaks}}</p>
+			</div>
+		{% endfor %}
 
-		</div>
-
-		<div>
-			<p>published: 14.03.2016, 12:01</p>
-			<h2><a href="">My second post</a></h2>
-			<P>A quick look at the World Bank data on GDP per capita, which measures the average wealth per person, across selected countries reveals a strong catch-up game between Nigeria and South Africa. In 1990, an average South African was 10x richer than an average Nigerian. 23 years after (in 2013)</P>
-		</div>
-	
 	</body>
 
 </html>
